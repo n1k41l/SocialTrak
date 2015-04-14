@@ -5,6 +5,7 @@
 
     </head>
     <body>
+    {{ Helpers::full_title($title)  }}
         @yield('content')
     </body>
 </html>
