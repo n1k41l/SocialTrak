@@ -13,7 +13,12 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+/*
+ * Static Pages Routes
+ */
+Route::get('home', 'PagesController@home');
+Route::get('about', 'PagesController@about');
+Route::get('help', 'PagesController@help')
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
