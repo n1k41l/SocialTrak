@@ -14,7 +14,8 @@ class PagesController extends Controller {
 	 */
 	public function home()
 	{
-		return view('pages.home');
+		$title = 'Home';
+		return view('pages.home', compact('title'));
 	}
 
 	/**
@@ -24,7 +25,8 @@ class PagesController extends Controller {
 	 */
 	public function help()
 	{
-		return view('pages.help');
+		$title = 'Help';
+		return view('pages.help', compact('title'));
 	}
 
 	/**
@@ -34,7 +36,8 @@ class PagesController extends Controller {
 	 */
 	public function about()
 	{
-		return view('pages.about');
+		$title = 'About';
+		return view('pages.about', compact('title'));
 	}
 
 }

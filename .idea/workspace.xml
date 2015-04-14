@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e4e5839-8f74-4668-aebf-5d771cffc422" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/SocialTrak.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/help.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/application.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/about.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/help.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/help.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SocialTrak.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PagesController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.059354838" vertical-offset="115" max-vertical-offset="989">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.29677418" vertical-offset="0" max-vertical-offset="775">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,11 +50,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/help.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/application.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/help.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -153,7 +151,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -274,19 +272,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59354836" vertical-offset="0" max-vertical-offset="775">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <marker date="1429035897000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429035897000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429035897000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429035897000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.24645162" vertical-offset="191" max-vertical-offset="966">
@@ -302,36 +287,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/about.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71225804" vertical-offset="0" max-vertical-offset="1058">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <marker date="1429038813000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1429038813000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429038813000" expanded="true" signature="-1:-1" placeholder=" Show home page ..." />
+            <marker date="1429038813000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429038813000" expanded="true" signature="-1:-1" placeholder=" Show the help page ..." />
+            <marker date="1429038813000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429038813000" expanded="true" signature="-1:-1" placeholder=" Show the about us page ..." />
+            <marker date="1429038813000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/application.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20774193" vertical-offset="0" max-vertical-offset="775">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <marker date="1429039184000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429039184000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429039184000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.059354838" vertical-offset="0" max-vertical-offset="775">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
+          <caret line="2" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <marker date="1429039247000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/help.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.059354838" vertical-offset="0" max-vertical-offset="775">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.089032255" vertical-offset="0" max-vertical-offset="775">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding>
-            <marker date="1429036159000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429039268000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/about.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.059354838" vertical-offset="115" max-vertical-offset="989">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.089032255" vertical-offset="0" max-vertical-offset="775">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <marker date="1429039283000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1127">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1429034690000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1429034690000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429034690000" expanded="true" signature="-1:-1" placeholder=" This namespace is applied to the controller routes in your routes file. ..." />
+            <marker date="1429034690000" expanded="true" signature="-1:-1" placeholder=" Define your route model bindings, pattern filters, etc. ..." />
+            <marker date="1429034690000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429034690000" expanded="true" signature="-1:-1" placeholder=" Define the routes for the application. ..." />
+            <marker date="1429034690000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1429034690000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429034690000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29677418" vertical-offset="0" max-vertical-offset="775">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
