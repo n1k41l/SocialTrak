@@ -19,7 +19,9 @@ Route::get('about', 'PagesController@about');
 Route::get('help', 'PagesController@help');
 Route::get('contact', 'PagesController@contact');
 
-Route::get('signup','UsersController@signup');
+Route::get('signup',[
+	'as' => 'register_path', 'uses' => 'UsersController@signup'
+]);
 
 Route::resource('users', 'UsersController');
 
