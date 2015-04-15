@@ -19,6 +19,10 @@ Route::get('about', 'PagesController@about');
 Route::get('help', 'PagesController@help');
 Route::get('contact', 'PagesController@contact');
 
+Route::get('signup','UsersController@signup');
+
+Route::resource('users', 'UsersController');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

@@ -25,6 +25,11 @@ class RouteServiceProvider extends ServiceProvider {
 		//
 		
 		parent::boot($router);
+
+		$router->bind('users', function($id)
+		{
+			return \App\User::findOrFail($id);
+		});
 	}
 
 	/**
