@@ -36,8 +36,19 @@ class PagesController extends Controller {
 	 */
 	public function about()
 	{
-		$title = 'About';
+		$title = 'About Us';
 		return view('pages.about', compact('title'));
+	}
+
+	/**
+	 * Show the contact us page
+	 *
+	 * @return \Illuminate\View\View
+	 */
+	public function contact()
+	{
+		$title = 'Contact Us';
+		return view('pages.contact', compact('title'));
 	}
 
 }

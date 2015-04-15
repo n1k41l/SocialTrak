@@ -17,6 +17,7 @@
 Route::get('/', 'PagesController@home');
 Route::get('about', 'PagesController@about');
 Route::get('help', 'PagesController@help');
+Route::get('contact', 'PagesController@contact');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -9,6 +9,7 @@ class Helpers {
 	public static function full_title($title)
 	{
 		$base_title = 'Social Tracking Application';
+		
 		if (isset($title) && $title != ''){
 			$comp_title = $title . " | " .  $base_title;	
 		} else {
