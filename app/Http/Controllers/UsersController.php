@@ -17,7 +17,7 @@ class UsersController extends Controller {
 	public function signup()
 	{
 		$title = 'Sign Up';
-		return view('users.signup', compact('title'));
+		return view('auth.register', compact('title'));
 	}
 
 	public function show(User $user)

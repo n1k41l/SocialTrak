@@ -7,7 +7,7 @@
 		<title>{{ Helpers::full_title($title)  }}</title>
 		<!-- Stylesheets -->
 		<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-		<link href="{{ asset('/css/footer.css') }}" rel="stylesheet">
+		<link href="{{ asset('/css/application.css') }}" rel="stylesheet">
 
 		<!-- Fonts -->
 		<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>

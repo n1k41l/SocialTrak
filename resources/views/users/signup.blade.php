@@ -1,10 +1,11 @@
 @extends('layouts.application')
 @section('content')
-   <h1>Sign Up!</h1>
+   <h2>Sign Up!</h2>
+   <hr>
 
    <div class="row">
       <div class="col-md-8 col-md-offset-2">
-
+      @include('errors.errors')
          {!! Form::open(['route' => 'users.store']) !!}
          <!-- Username Form Input -->
          <div class="form-group">
