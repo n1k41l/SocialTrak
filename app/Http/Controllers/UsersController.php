@@ -10,6 +10,11 @@ use App\User;
 
 class UsersController extends Controller {
 
+	public function __construct()
+	{
+		$this->middleware('auth', ['except' => ['signup', 'show']]);
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
