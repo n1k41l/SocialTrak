@@ -1,6 +1,7 @@
 @extends('layouts.application')
 
 @section('content')
+
     <h1>Edit User: {!! $user->name !!}</h1>
 
     @include('errors.errors')

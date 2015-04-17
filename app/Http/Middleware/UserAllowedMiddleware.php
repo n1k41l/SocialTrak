@@ -3,8 +3,7 @@
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-
-class Authenticate {
+class UserAllowedMiddleware {
 
 	/**
 	 * The Guard implementation.
@@ -13,7 +12,7 @@ class Authenticate {
 	 */
 	protected $auth;
 
-
+	
 	/**
 	 * Create a new filter instance.
 	 *
@@ -34,19 +33,15 @@ class Authenticate {
 	 */
 	public function handle($request, Closure $next)
 	{
-		if ($this->auth->guest())
-		{
-			if ($request->ajax())
-			{
-				return response('Unauthorized.', 401);
-			}
-			else
-			{
-				flash()->error('You must be logged in to view this page');
-				return redirect()->guest('auth/login');
-			}
-		}
+		$formReq = $request->route()->getParameter('users')->id;
+		$userId  = $this->auth->user()->id;
+		
+		if ($formReq != $userId) {
 
+			flash()->error('You may only edit your own account...');
+			return redirect()->guest('/');
+		}
+		
 		return $next($request);
 	}
 

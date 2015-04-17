@@ -8,11 +8,13 @@ use Illuminate\Http\Request;
 
 use App\User;
 
+
 class UsersController extends Controller {
 
 	public function __construct()
 	{
 		$this->middleware('auth', ['except' => ['signup', 'show']]);
+		$this->middleware('permittedUser', ['only' => ['edit', 'update']]);
 	}
 
 	/**
@@ -33,7 +35,9 @@ class UsersController extends Controller {
 
 	public function edit(User $user)
 	{
+
 		return view('users.edit', compact('user'));
+
 	}
 
 
@@ -46,7 +50,16 @@ class UsersController extends Controller {
 	{
 		$user->update($request->all());
 
+		flash()->success('User updated successfully!');
 		return redirect('/users/'.$user->id);
+	}
+
+	public function index()
+	{
+		$title = 'All Users';
+		$users = User::all();
+
+		return view('users.index', compact('title','users'));
 	}
 
 	
