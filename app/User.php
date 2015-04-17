@@ -42,4 +42,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		return "http://www.gravatar.com/avatar/$hash";
 	}
 
+	public function isAdmin()
+	{
+		return $this->admin;
+	}
+
 }

@@ -4,13 +4,14 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{{ Helpers::full_title($title)  }}</title>
+		<!--<title> #Helpers::full_title($title)  </title>-->
 		<!-- Stylesheets -->
 		<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 		<link href="{{ asset('/css/application.css') }}" rel="stylesheet">
 
 		<!-- Fonts -->
 		<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 		@include('layouts.partials.shim')
 	</head>

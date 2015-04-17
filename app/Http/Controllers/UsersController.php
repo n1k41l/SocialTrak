@@ -28,11 +28,19 @@ class UsersController extends Controller {
 		return view('auth.register', compact('title'));
 	}
 
+	/**
+	 * @param User $user
+	 * @return \Illuminate\View\View
+	 */
 	public function show(User $user)
 	{
 		return view('users.show', compact('user'));
 	}
 
+	/**
+	 * @param User $user
+	 * @return \Illuminate\View\View
+	 */
 	public function edit(User $user)
 	{
 
@@ -54,12 +62,20 @@ class UsersController extends Controller {
 		return redirect('/users/'.$user->id);
 	}
 
+	/**
+	 * @return \Illuminate\View\View
+	 */
 	public function index()
 	{
 		$title = 'All Users';
 		$users = User::all();
 
 		return view('users.index', compact('title','users'));
+	}
+
+	public function destroy(User $user)
+	{
+		$user->delete();
 	}
 
 	
