@@ -77,8 +77,10 @@ class UsersController extends Controller {
 	{
 		$user->delete();
 		$title = 'All Users';
+
+		$users = User::all();
 		flash()->success('User deleted!');
-		return view('users.index', compact('title'));
+		return view('users.index', compact('title', 'users'));
 	}
 
 	
