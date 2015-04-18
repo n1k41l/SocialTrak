@@ -1,12 +1,6 @@
-<?php namespace App\Http;
+<?php
 
-class Helpers {
-
-	/**
-	 * @param $title
-	 * @return string
-	 */
-	public function full_title($title)
+	function full_title($title)
 	{
 		$base_title = 'Social Tracking Application';
 		
@@ -19,7 +13,7 @@ class Helpers {
 		return $comp_title;
 	}
 
-	public function delete_form($routeParam, $label = 'Delete')
+	function delete_form($routeParam, $label = 'Delete')
 	{
 		$form = Form::open(['method' => 'DELETE', 'route' => $routeParam]);
 
@@ -27,4 +21,3 @@ class Helpers {
 
 		return $form .= Form::close();
 	}
-}

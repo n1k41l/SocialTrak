@@ -76,6 +76,9 @@ class UsersController extends Controller {
 	public function destroy(User $user)
 	{
 		$user->delete();
+		$title = 'All Users';
+		flash()->success('User deleted!');
+		return view('users.index', compact('title'));
 	}
 
 	
