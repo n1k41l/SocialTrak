@@ -47,4 +47,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		return $this->admin;
 	}
 
+	/**
+	 *  A user can have many microposts
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+	 */
+	public function micropost()
+	{
+		return $this->hasMany('App\Micropost');
+	}
+
 }
