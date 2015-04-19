@@ -18,7 +18,7 @@ class UsersController extends Controller {
 	}
 
 	/**
-	 * Display a listing of the resource.
+	 * Display a registration form.
 	 *
 	 * @return Response
 	 */
@@ -29,6 +29,8 @@ class UsersController extends Controller {
 	}
 
 	/**
+	 * show an existing user
+	 *
 	 * @param User $user
 	 * @return \Illuminate\View\View
 	 */
@@ -38,6 +40,8 @@ class UsersController extends Controller {
 	}
 
 	/**
+	 * show the page to edit existing user
+	 *
 	 * @param User $user
 	 * @return \Illuminate\View\View
 	 */
@@ -50,8 +54,10 @@ class UsersController extends Controller {
 
 
 	/**
+	 * update an existing user
+	 *
 	 * @param User $user
-	 * @param Request $request
+	 * @param UserRequest $request
 	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
 	 */
 	public function update(User $user, UserRequest $request)
@@ -63,26 +69,44 @@ class UsersController extends Controller {
 	}
 
 	/**
+	 * show all users
+	 *
 	 * @return \Illuminate\View\View
 	 */
 	public function index()
 	{
 		$title = 'All Users';
-		$users = User::all();
+		$users = $this->showAllUsers();
 
 		return view('users.index', compact('title','users'));
 	}
 
+	/**
+	 * delete an existing user
+	 *
+	 * @param User $user
+	 * @return \Illuminate\View\View
+	 * @throws \Exception
+	 */
 	public function destroy(User $user)
 	{
 		$user->delete();
-		$title = 'All Users';
 
-		$users = User::all();
+		$title = 'All Users';
+		$users = $this->showAllUsers();
+
 		flash()->success('User deleted!');
 		return view('users.index', compact('title', 'users'));
 	}
 
-	
+	/**
+	 *  return all users
+	 *
+	 * @return \Illuminate\Database\Eloquent\Collection|static[]
+	 */
+	private function showAllUsers()
+	{
+		return User::all();
+	}
 
 }
