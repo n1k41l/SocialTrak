@@ -36,7 +36,11 @@ class UsersController extends Controller {
 	 */
 	public function show(User $user)
 	{
-		return view('users.show', compact('user'));
+		$microposts = $user->microposts()
+			->latest('updated_at')
+			->paginate(10);
+			
+		return view('users.show', compact('user', 'microposts'));
 	}
 
 	/**

@@ -52,7 +52,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
 	 */
-	public function micropost()
+	public function microposts()
 	{
 		return $this->hasMany('App\Micropost');
 	}

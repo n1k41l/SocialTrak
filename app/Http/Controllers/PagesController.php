@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class PagesController extends Controller {
 
@@ -15,7 +16,15 @@ class PagesController extends Controller {
 	public function home()
 	{
 		$title = 'Home';
-		return view('pages.home', compact('title'));
+		$feed_items=[];
+
+		if (Auth::check()) 
+		{
+			$feed_items = Auth::user()->microposts()
+				->latest('updated_at')
+				->paginate(10);
+		}
+		return view('pages.home', compact('title','feed_items'));
 	}
 
 	/**

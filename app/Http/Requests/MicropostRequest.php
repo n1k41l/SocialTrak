@@ -22,8 +22,7 @@ class MicropostRequest extends Request {
 	public function rules()
 	{
 		return [
-			'content' => 'required|max:140',
-			'user_id' => 'required'
+			'content' => 'required|max:140'
 		];
 	}
 

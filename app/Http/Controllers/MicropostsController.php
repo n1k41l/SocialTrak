@@ -4,27 +4,16 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Micropost;
+use App\Http\Requests\MicropostRequest;
+use Auth;
 
 class MicropostsController extends Controller {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
+	public function __construct()
 	{
-		//
+		$this->middleware('auth');
 	}
 
 	/**
@@ -32,43 +21,17 @@ class MicropostsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(MicropostRequest $request)
 	{
-		//
+		$this->createMicropost($request);
+
+		flash()->success('Micropost Created!');
+
+		return redirect('/');
+
 	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
+	
 
 	/**
 	 * Remove the specified resource from storage.
@@ -79,6 +42,13 @@ class MicropostsController extends Controller {
 	public function destroy($id)
 	{
 		//
+	}
+
+	private function createMicropost(MicropostRequest $request)
+	{
+		$micropost = Auth::user()->microposts()->create($request->all());
+
+		return $micropost;
 	}
 
 }
