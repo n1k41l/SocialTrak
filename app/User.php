@@ -57,4 +57,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		return $this->hasMany('App\Micropost');
 	}
 
+	public function follow()
+	{
+		return $this->belongsToMany('User','user_follows','user_id','follow_id');
+	}
+
+	public function followers()
+	{
+		return $this->belongsToMany('User', 'user_follows', 'follower_id', 'user_id');
+	}
+
 }

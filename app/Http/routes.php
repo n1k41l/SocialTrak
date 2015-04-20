@@ -24,6 +24,12 @@ Route::get('signup',[
 ]);
 
 Route::resource('users', 'UsersController');
+Route::get('users/{users}/following', [
+	'as' => 'users.following', 'uses' => 'UsersController@following'
+]);
+Route::get('users/{users}/followers', [
+	'as' => 'users.followers' ,'uses' => 'UsersController@followers'
+]);
 
 Route::resource('microposts', 'MicropostsController',[
 		'only' => ['store', 'destroy']
