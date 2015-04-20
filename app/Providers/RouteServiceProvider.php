@@ -30,6 +30,11 @@ class RouteServiceProvider extends ServiceProvider {
 		{
 			return \App\User::findOrFail($id);
 		});
+
+		$router->bind('microposts', function($id)
+		{
+			return \App\Micropost::findOrFail($id);
+		});
 	}
 
 	/**

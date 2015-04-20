@@ -17,7 +17,7 @@
 	{
 		$form = Form::open(['method' => 'DELETE', 'route' => $routeParam]);
 
-		$form .= Form::submit($label, ['class' => 'btn btn-danger']);
+		$form .= Form::submit($label, ['class' => 'submitLink']);
 
 		return $form .= Form::close();
 	}

@@ -1,6 +1,7 @@
 <?php
 
 use App\Micropost;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class MicropostTableSeeder extends Seeder {
@@ -9,11 +10,12 @@ class MicropostTableSeeder extends Seeder {
 	{
 		$faker = Faker\Factory::create();
 
-		foreach(range(1,20) as $index)
+		$users = User::all()->lists('id');
+		foreach(range(1,100) as $index)
 		{
 			Micropost::create([
-				'content' 		=> $faker->text($maxNbChars = 200),
-				'user_id'		=> '21'
+				'content' 		=> $faker->text($maxNbChars = 140),
+				'user_id'		=> $faker->randomElement($users)
 			]);
 		}
 	}

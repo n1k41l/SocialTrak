@@ -39,9 +39,13 @@ class MicropostsController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy(Micropost $micropost)
 	{
-		//
+		$micropost->delete();
+
+		flash()->error('Micropost Deleted!');
+
+		return redirect('/');
 	}
 
 	private function createMicropost(MicropostRequest $request)

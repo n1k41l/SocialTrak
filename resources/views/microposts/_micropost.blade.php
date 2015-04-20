@@ -4,5 +4,9 @@
     <span class="content">{{ $micropost->content }}</span>
     <span class="timestamp">
         Posted {{ $micropost->updated_at->diffForHumans() }}
+
+        @if(Auth::user()->id == $micropost->user_id)
+            {!! delete_form(['microposts.destroy', $micropost->id]) !!}
+        @endif
     </span>
 </li>
