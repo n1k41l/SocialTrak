@@ -67,4 +67,13 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		return $this->belongsToMany('App\User', 'user_follows', 'follow_id', 'user_id');
 	}
 
+	public function currentlyFollows(User $otheruser)
+	{
+		// view user profile
+		// pass user profile id / object to function
+		// retrives array of all followed users
+		// uses in_array function to check if user is already followed.
+		$idInArray = $this->follows()->lists('follow_id');
+	}
+
 }

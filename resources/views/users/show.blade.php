@@ -14,7 +14,7 @@
    
 
    <div class="col-md-8">
-
+   @include('users._follow')
    		@if(count($user->microposts) > 0)
    			<h3> Microposts ({{ count($user->microposts) }})</h3>
    			<ol class="microposts">

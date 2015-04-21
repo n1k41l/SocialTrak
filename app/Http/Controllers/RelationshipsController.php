@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class RelationshipsController extends Controller {
 
@@ -14,9 +16,10 @@ class RelationshipsController extends Controller {
 		$this->middleware('auth');
 	}
 
-	public function create()
+	public function store()
 	{
 		$follow = User::findOrFail(Input::get('follow_id'));
+
 		Auth::user()->follows()
 				->save($follow);
 
