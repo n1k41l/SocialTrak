@@ -13,6 +13,9 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="{{ url('/') }}">Home</a></li>
+				@if(Auth::user()->isAdmin())
+					<li><a href="{{ url('/users') }}">Users</a></li>
+				@endif
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">

@@ -18,6 +18,9 @@
 					<section class="user_info">
 						@include('layouts.shared.user_info')
 					</section>
+					<section class="stats">
+						@include('layouts.shared.stats')
+					</section>
 					<section class="micropost_form">
 						@include('layouts.shared.micropost_form')
 					</section>

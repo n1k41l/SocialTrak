@@ -35,6 +35,10 @@ Route::resource('microposts', 'MicropostsController',[
 		'only' => ['store', 'destroy']
 	]);
 
+Route::resource('relationships', 'RelationshipsController', [
+		'only' => ['store', 'destroy']
+	]);
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

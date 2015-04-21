@@ -103,6 +103,25 @@ class UsersController extends Controller {
 		return view('users.index', compact('title', 'users'));
 	}
 
+	public function following(User $user)
+	{
+		$title = "Following";
+		$users = $user->follows()
+			->paginate(10);
+
+		return view('users.show_follow', compact('user', 'users', 'title'));
+	}
+
+	public function followers(User $user)
+	{
+		$title = 'Followers';
+		$users = $user->followers()
+			->paginate(10);
+
+		return view('users.show_follow', compact('user', 'users', 'title'));
+
+	}
+
 	/**
 	 *  return all users
 	 *
@@ -110,7 +129,7 @@ class UsersController extends Controller {
 	 */
 	private function showAllUsers()
 	{
-		return User::all();
+		return User::paginate(10);
 	}
 
 }

@@ -1,14 +1,17 @@
 @extends('layouts.application')
 @section('content')
 <div class="row">
-   <aside class="col-md-4">
-      <section class="user_info">
-         <h1>
-            <img src="{{ $user->gravatar }}" class="gravatar img-circle" alt="Circular Image">
-            {{ $user->name }}
-         </h1>
-      </section>
-   </aside>
+   <div class="col-md-4">
+      <aside>
+         <section class="user_info">
+            @include('layouts.shared.user_info')
+         </section>
+         <section class="stats">
+            @include('layouts.shared.stats')
+         </section>
+      </aside>   
+   </div>
+   
 
    <div class="col-md-8">
 
