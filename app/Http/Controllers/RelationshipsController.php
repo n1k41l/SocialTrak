@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 
 class RelationshipsController extends Controller {
 
@@ -23,11 +24,18 @@ class RelationshipsController extends Controller {
 		Auth::user()->follows()
 				->save($follow);
 
-		return redirect('/');
+		flash()->success('You are now following this user');
+
+		return Redirect::back();
 	}
 
-	public function destroy($id, $unfollow)
+	public function destroy($userIdToUnfollow)
 	{
+		Auth::user()->follows()->detach($userIdToUnfollow);
+
+		flash()->success('You have now unfollowed this user');
+
+		return Redirect::back();
 
 	}
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Micropost extends Model {
 
 	protected $fillable = ['content'];
@@ -15,5 +16,6 @@ class Micropost extends Model {
 	{
 		return $this->belongsTo('App\User');
 	}
+
 
 }

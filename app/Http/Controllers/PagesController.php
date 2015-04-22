@@ -20,9 +20,7 @@ class PagesController extends Controller {
 
 		if (Auth::check()) 
 		{
-			$feed_items = Auth::user()->microposts()
-				->latest('updated_at')
-				->paginate(10);
+			$feed_items = Auth::user()->feed()->paginate(10);
 			$user = Auth::user();
 		}
 		return view('pages.home', compact('title','feed_items','user'));

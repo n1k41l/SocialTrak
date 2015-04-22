@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use App\Micropost;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
 
@@ -67,13 +68,23 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		return $this->belongsToMany('App\User', 'user_follows', 'follow_id', 'user_id');
 	}
 
-	public function currentlyFollows(User $otheruser)
+	public function isFollowed(User $otheruser)
 	{
-		// view user profile
-		// pass user profile id / object to function
-		// retrives array of all followed users
-		// uses in_array function to check if user is already followed.
-		$idInArray = $this->follows()->lists('follow_id');
+		// if currently authenticated user follows user
+		$followedIds = $this->follows()->lists('follow_id');
+
+		return in_array($otheruser->id, $followedIds);
+		
 	}
+
+	public function feed()
+	{
+		$userIds 	= $this->follows()->lists('follow_id');
+		$userIds[] 	= $this->id;
+
+		return Micropost::with('user')->whereIn('user_id', $userIds)
+			->latest('updated_at');
+	}
+
 
 }
