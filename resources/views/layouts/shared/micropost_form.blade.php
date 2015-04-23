@@ -5,7 +5,7 @@
 			'class' => 'form-control',
 			'placeholder' => 'Compose new micropost...',
 			'maxlength' => '140',
-			'rows' => '5',
+			'rows' => '4',
 			'id' => '_micropost'
 		]) !!}	
 	</div>
