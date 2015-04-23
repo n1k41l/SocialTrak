@@ -166,3 +166,6 @@ span.picture input {
   padding: 0;
 }
 
+form {
+  display: inline;
+}

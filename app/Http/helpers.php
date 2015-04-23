@@ -15,7 +15,7 @@
 
 	function delete_form($routeParam, $label = 'Delete')
 	{
-		$form = Form::open(['method' => 'DELETE', 'route' => $routeParam]);
+		$form = Form::open(['method' => 'DELETE', 'route' => $routeParam, 'class' => 'form-inline']);
 
 		$form .= Form::submit($label, ['class' => 'submitLink']);
 
